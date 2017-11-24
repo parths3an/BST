@@ -3,6 +3,7 @@
 #update the value in the status.txt file
 git status > temp.txt
 if grep -q committed temp.txt; then
+    rm temp.txt
     echo "There are unstaged changes..."
     git status
     git add .
