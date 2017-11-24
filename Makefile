@@ -24,7 +24,7 @@ main.o: main.cpp
 
 bst.o: bst.h Node.o
 
-Node.o: node.h
+Node.o: Node.h
 
 clean:
 		rm -f pathfinder *.o core*

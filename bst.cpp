@@ -3,7 +3,7 @@
  */
 
 #include "Node.h"
-#include "BST.h"
+#include "bst.h"
 
 BST::~BST()
 {
