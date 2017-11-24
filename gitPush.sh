@@ -16,6 +16,7 @@ if grep -q committed temp.txt; then
     if git push
       then
  	 echo "git push succeeded"
+     rm temp.txt 
     else
          echo "git push failed"
 	 echo "Please retype your credentials properly."
