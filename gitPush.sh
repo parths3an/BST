@@ -16,8 +16,7 @@ if grep -q committed temp.txt; then
     #The line below will ask you to enter username and password for github account and aslo check if you entered wrong user id or password, it will ask you to enter again.
     if git push
       then
- 	 echo "git push succeeded"
-     rm temp.txt 
+ 	 echo "git push succeeded" 
     else
          echo "git push failed"
 	 echo "Please retype your credentials properly."
