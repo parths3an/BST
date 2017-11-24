@@ -27,13 +27,96 @@ unsigned int BST::getSize()
 }
 
 void BST::printInOrder()
-{}
+{ 
+    if(root == nullptr)
+    {
+        return;
+    }
+    else 
+    {
+        pInOrderHelper(root);
+    }
+}
+
+void BST::pInOrderHelper(Node* tempRoot)
+{
+    //Left-Root-Right
+    if (tempRoot == nullptr)
+    {
+        return; 
+    }
+
+    //Go to the left sub-tree
+    pInOrderHelper(tempRoot->left);
+
+    //Print/visit the node
+    cout << tempRoot->data << " ";
+
+    //Go to the right sub-tree
+    pInOrderHelper(tempRoot->right);
+}
 
 void BST::printPreOrder()
-{}
+{
+    if(root == nullptr)
+    {
+        return;
+    }
+    else 
+    {
+        pPreOrderHelper(root);
+    }
+}
+
+void BST::pPreOrderHelper(Node* tempRoot)
+{
+    //Root - left - right
+    if(tempRoot == nullptr)
+    {
+        return;
+    }
+
+    //Visiting the node
+    cout << tempRoot->data << " ";
+
+    //Go left
+    pPreOrderHelper(tempRoot->left);
+
+    //Go right
+    pPreOrderHelper( tempRoot->right); 
+}
 
 void BST::printPostOrder()
-{}
+{
+    //Left- right - root
+    if(root == nullptr)
+    {
+        return;
+    }
+    else 
+    {
+        pPostOrderHelper(root);
+    }
+
+}
+
+void BST::pPostOrderHelper(Node* tempRoot)
+{
+    //Left- right - root
+    if(tempRoot == nullptr)
+    {
+        return;
+    } 
+    //Go left
+    pPostOrderHelper(tempRoot->left);
+
+    //Go right
+    pPostOrderHelper(tempRoot->right);
+    
+    //Visiting Node
+    cout << tempRoot->data << " ";
+
+}
 
 bool BST::insert(int newData)
 {

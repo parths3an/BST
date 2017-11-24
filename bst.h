@@ -28,11 +28,20 @@ class BST
         //Print tree in inOrder
         void printInOrder();
 
+        //Print tree in inOrder Helper
+        void pInOrderHelper(Node* tempRoot);
+
         //Print tree in postOrder
         void printPostOrder();
+
+        //Print tree in inOrder Helper
+        void pPreOrderHelper(Node* tempRoot);
     
         //Print tree in preOrder
         void printPreOrder();
+
+        //Print tree in inOrder Helper
+        void pPostOrderHelper(Node* tempRoot);
 
         //Mutator funcitons     
         /** 
