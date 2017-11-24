@@ -22,6 +22,7 @@ if grep -q committed temp.txt; then
          git push	
     fi 
     git status > temp.txt
+    rm temp.txt
 else
     echo "Nothing to commit, working directory is clean."
     fi
