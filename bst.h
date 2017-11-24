@@ -18,6 +18,9 @@ class BST
         //Accessor function 
         //Get the root of the tree
         Node* getRoot();
+
+        //Get the data of the root
+        int getRootData();
         
         //Get size of the tree
         unsigned int getSize();
