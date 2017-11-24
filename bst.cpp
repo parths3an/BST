@@ -32,6 +32,25 @@ void BST::printPostOrder()
 
 bool BST::insert(int newData)
 {
+    //If root is null
+    if(root == nullptr)
+    {
+        Node* newNode = new Node(newData);
+        root = newNode; 
+    }
+
+    //If root is not null 
+    //Look for the place where to insert the node. 
+    bool inserted = false; 
+    Node* cur  = root;
+
+    while(!inserted)
+    {
+        if(cur->data == new)
+
+
+    }
+
     return true; //temp return 
 }
 
