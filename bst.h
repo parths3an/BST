@@ -57,7 +57,7 @@ class BST
          * Find: This function will return true or 
          *         false. 
          * True: If the data was found in the bst then true.
-         * False: If the data was not found in the bst.  
+         * False: If the data was not found in the bst or tree is empty  
          */
         bool find(int findData);
 

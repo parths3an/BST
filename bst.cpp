@@ -176,7 +176,54 @@ bool BST::insert(int newData)
 
 bool BST::find(int findData)
 {
-    return true; //temp return 
+    //If root is null
+    if( root == nullptr)
+    {
+        cout << "Root is null; Tree is empty\n";
+        return false;
+    }
+    //If root is not null
+    Node* curr = root;
+    
+    //Check if the root itself is the findData
+    bool found = false;
+    while(!found)
+    {
+        if( findData == curr->data)
+        {
+            found = true;
+            return true;
+        }
+        //Go left
+        if( findData < curr->data )
+        {
+            //Check if left is not null first 
+            if( curr->left != nullptr)
+            {
+                curr = curr->left;
+            }
+            else //left is null, element not found 
+            {
+                found = true;
+                return false;
+            }
+        }
+        else //Go right
+        {
+            //Check if right is not null first 
+            if( curr->right != nullptr)
+            {
+                curr = curr->right;
+            }
+            else //right is null, element not found 
+            {
+                found = true;
+                return false;
+            }
+        }
+    }
+
+    return true; //Just to get rid of the warnings 
 }
 
 bool BST::deleteNode(int delData)
