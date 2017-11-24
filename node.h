@@ -1,7 +1,7 @@
 /**
  * declaration of the node class
  */
-//TODO: Create a template based Node class
+
 #ifndef NODE_H
 #define NODE_H
 
