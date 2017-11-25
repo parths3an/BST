@@ -233,5 +233,41 @@ bool BST::deleteNode(int delData)
 
 void BST::deleteAll(Node* rootNode)
 {
-    
-}
+    /**
+     * Implement the PostOrder Traversal and
+     * instead of printing delete the node. 
+     * Left - Right - Root
+     */
+
+    if(rootNode == nullptr)
+    {
+        return; 
+    }
+
+    if( rootNode->left != nullptr)
+    {
+        deleteAll(rootNode->left);
+        
+        if( rootNode->right != nullptr)
+        {
+            deleteAll(rootNode->right);
+        }
+    }
+    else if( rootNode->right != nullptr)
+    {
+        deleteAll(rootNode->right);
+
+        if( rootNode->left != nullptr)
+        {
+            deleteAll(rootNode->left);
+        }      
+    }
+    else 
+    {
+         if(rootNode -> left == nullptr and root->right == nullptr)
+        {
+            delete rootNode;
+        }
+    }
+
+} //End: DeleteAll 

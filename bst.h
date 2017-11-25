@@ -68,7 +68,7 @@ class BST
          * False: If the data was not found and not deleted.
          */
         bool deleteNode(int delData);
-
+        
         /** 
          * deleteAll: This function will be used in the 
          *            destructor of the BST class and will use DFS 
@@ -79,8 +79,7 @@ class BST
          */
         void deleteAll(Node* rootNode);
         
-        
-
+    
     private:
         Node* root;             //Root of the tree
         unsigned int size;      //Size of the tree
